@@ -34,6 +34,7 @@ Summary: Muscle PCSC Framework for Linux libraries
 Group: System/Libraries
 # up to version 1.3.0, libpcsclite had libmusclecard files
 Conflicts: pcsc-lite < 1.3.0
+Provides: libmusclecard = %{version}-%{release}
 
 %description -n %{libmusclename}
 The purpose of PCSC Lite is to provide a Windows(R) SCard interface in a
