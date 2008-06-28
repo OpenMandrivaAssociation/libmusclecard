@@ -4,13 +4,13 @@
 Summary: Muscle PCSC Framework for Linux libraries
 Name: libmusclecard
 Version: 1.3.3
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: System/Libraries
 Source0: https://alioth.debian.org/download.php/1478/libmusclecard-%{version}.tar.gz
 Source1: https://alioth.debian.org/download.php/1479/libmusclecard-%{version}.tar.gz.asc
 URL: http://pcsclite.alioth.debian.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # actually, it needs 1.2.9-beta7 or higher, but I don't want
 # to play with rpm e-v-r comparisons with a "beta" string in them
 BuildRequires: libpcsclite-devel >= 1.3.0
