@@ -4,11 +4,12 @@
 Summary: Muscle PCSC Framework for Linux libraries
 Name: libmusclecard
 Version: 1.3.6
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: System/Libraries
 Source0: https://alioth.debian.org/download.php/1478/libmusclecard-%{version}.tar.bz2
 Source1: https://alioth.debian.org/download.php/1479/libmusclecard-%{version}.tar.bz2.asc
+Patch0: libmusclecard-1.3.6-pcsclite-1.6.patch
 URL: http://pcsclite.alioth.debian.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # actually, it needs 1.2.9-beta7 or higher, but I don't want
@@ -73,15 +74,16 @@ This package contains a libmusclecard static library used for development.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch0 -p0
 
 %build
 autoreconf -fi
-%configure --enable-muscledropdir=%{_libdir}/pcsc/services
-make
+%configure2_5x --enable-muscledropdir=%{_libdir}/pcsc/services
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make DESTDIR=%{buildroot} install
+%makeinstall_std
 
 # this file is included in %%doc
 rm -rf %{buildroot}%{_prefix}/doc
