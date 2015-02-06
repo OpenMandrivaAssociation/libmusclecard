@@ -4,7 +4,7 @@
 Summary: Muscle PCSC Framework for Linux libraries
 Name: libmusclecard
 Version: 1.3.6
-Release: 3
+Release: 4
 License: GPL
 Group: System/Libraries
 Source0: https://alioth.debian.org/download.php/1478/libmusclecard-%{version}.tar.bz2
