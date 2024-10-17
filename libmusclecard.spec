@@ -10,7 +10,7 @@ Group: System/Libraries
 Source0: https://alioth.debian.org/download.php/1478/libmusclecard-%{version}.tar.bz2
 Source1: https://alioth.debian.org/download.php/1479/libmusclecard-%{version}.tar.bz2.asc
 Patch0: libmusclecard-1.3.6-pcsclite-1.6.patch
-URL: http://pcsclite.alioth.debian.org/
+URL: https://pcsclite.alioth.debian.org/
 # actually, it needs 1.2.9-beta7 or higher, but I don't want
 # to play with rpm e-v-r comparisons with a "beta" string in them
 BuildRequires: libpcsclite-devel >= 1.3.0
