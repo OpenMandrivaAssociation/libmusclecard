@@ -13,6 +13,11 @@ Patch0: libmusclecard-1.3.6-pcsclite-1.6.patch
 URL: https://pcsclite.alioth.debian.org/
 # actually, it needs 1.2.9-beta7 or higher, but I don't want
 # to play with rpm e-v-r comparisons with a "beta" string in them
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: libpcsclite-devel >= 1.3.0
 BuildRequires: pkgconfig
 
